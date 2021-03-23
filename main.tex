@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{cite}
+ 
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Ideacion}
+            
+        \vspace{0.5cm}
+        \LARGE
+        Primeros pasos
+            
+        \vspace{1.5cm}
+            
+        \textbf{Juan Arlinton Martinez Cabrera}
+            
+        \vfill
+            
+        \vspace{0.8cm}
+            
+        \Large
+        Departamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Universidad de Antioquia\\
+        Turbo\\
+        Marzo 22 del 2021
+            
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\section{Introduccion}\label{intro}
+Basado a los temas expuestos en clases se da prioridad a una idea subjetiva sobre el proyecto final, el cual es elaborar un juego con el lenguaje de programación C++, el cual se ira desarrollando a medida de que cada cada tema sea explicado en las tutorías.
+
+\section{Contenido} \label{contenido}
+ 
+\subsection{Justificación}
+Al observas que mi trabajo requiere de mucho tiempo he disidido empezar el proyecto solo y trabajar con mas comodidad, revise todos los vídeos de teoría ya que me queda poco tiempo para asistir a los encuentros sincrónicos,tuve una lluvia de ideas y son pocos los posible proyectos, en mi ideación presentare la idea a realizar realizar(jumper)
+\subsection{Citación}
+Vamos a os a citar por ejemplo un artículo de \textbf{Albert Einstein} \cite{einstein}.
+También es posible citar libros \cite{dirac} o documentos en línea \cite{knuthwebsite}.\\\\
+Revisar en la última sección el formato de las referencias en IEEE.
+
+\subsection{Incluir código en el documento}
+%
+A continuación, se presenta el código \ref{codigo_ejemplo}, que nos permite incluir en el informe partes de programa que requieran una explicación adicional.
+\begin{lstlisting}[language=C++, label=codigo_ejemplo]
+// Programa desarrollado, compilado y ejecutado en https://www.onlinegdb.com
+#include <iostream>
+
+/*
+ * Esto es un comentario de varias lineas
+ */
+
+// Comentario de una sola linea
+
+#define N 10
+
+using namespace std;
+
+int main()
+{
+    
+    for( int i = 0 ; i < N ; i++ ){
+        
+        if( !(i % 2) )
+            cout << " El valor de i es -> " << i << endl;
+    }
+    
+    return 0;
+}
+
+//Resultado programa
+
+/*
+El valor de i es -> 0
+El valor de i es -> 2
+El valor de i es -> 4
+El valor de i es -> 6
+El valor de i es -> 8
+*/
+\end{lstlisting}
+En la sección \ref{imagenes}, se presentará como añadir ilustraciones al texto.
+
+
+\section{Inclusión de imágenes} \label{imagenes}
+
+En la Figura (\ref{fig:cpplogo}), se presenta el logo de C++ contenido en la carpeta images.
+
+\begin{figure}[h]
+\includegraphics[width=4cm]{cpplogo.png}
+\centering
+\caption{Logo de C++}
+\label{fig:cpplogo}
+\end{figure}
+
+Las secciones (\ref{intro}), (\ref{contenido}) y (\ref{imagenes}) dependen del estilo del documento.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
